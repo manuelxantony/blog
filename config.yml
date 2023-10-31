@@ -1,0 +1,10 @@
+server:
+  port: 8000
+
+database:
+  dbname: "blog"
+  table: "post"
+  dbuser: "root"
+  dbpassword: "root"
+  addr: "127.0.0.1:3306"
+  networktype: "tcp"

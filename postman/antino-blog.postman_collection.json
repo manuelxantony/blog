@@ -1,0 +1,112 @@
+{
+	"info": {
+		"_postman_id": "62a97fad-4add-46cf-8eb0-b1d5c7d15aaf",
+		"name": "antino-blog",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3400819"
+	},
+	"item": [
+		{
+			"name": "create post",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\" : \"Test Title\",\n    \"content\" : \"Test Content\",\n    \"createdby\" : \"Test User\"\n\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8000/blog/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"blog",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "showallposts",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "showpostsbyid",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/blog/showbyid?id=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"blog",
+						"showbyid"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete a post by id",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "update post",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{   \n    \"id\" : \"11\", \n    \"title\" : \"Test Title updated\",\n    \"content\" : \"Test Content updated\",\n    \"createdby\" : \"Test User\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8000/blog/update",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"blog",
+						"update"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
